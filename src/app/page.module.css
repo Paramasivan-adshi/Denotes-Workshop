@@ -1,22 +1,75 @@
-.main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
+.container {
+  padding: 20px;
 }
 
+.imageContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 50px;
+  align-items: center;
+}
+.imageItem {
+
+  flex-shrink: 1;
+  flex-basis: calc(33.33% - 100px);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.pagesize{
+  padding: 20px;
+}
+.image {
+  margin: 0 10px;
+}
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+
+}
+.clearfix{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.programDetails{
+
+  min-height: 1020px;
+  background: url('/AIDentistryBrochure images/1.jpg') no-repeat bottom center / cover;
+}
+.main {
+  background: #243c7c;
+  padding-bottom: 50px;
+}
+.bannerHead {
+  text-align: center;
+  margin-top: 60px;
+}
+.bannerHead h1 {
+  font-family: fangsong;
+  color: #fff;
+}
+.bannerHead h2 {
+  font-size: 32px;
+  padding-top: 20px;
+  color: #0af70a;
+  font-family: auto;
+}
+.bannerHead h3 {
+  font-size: 44px;
+  padding-top: 10px;
+  color: #d9ff09;
+  font-family: auto;
+}
 .description {
-  display: inherit;
-  justify-content: inherit;
-  align-items: inherit;
   font-size: 0.85rem;
   max-width: var(--max-width);
   width: 100%;
   z-index: 2;
   font-family: var(--font-mono);
 }
+
 
 .description a {
   display: flex;
@@ -45,40 +98,40 @@
   max-width: 100%;
   width: var(--max-width);
 }
-
-.card {
-  padding: 1rem 1.2rem;
-  border-radius: var(--border-radius);
-  background: rgba(var(--card-rgb), 0);
-  border: 1px solid rgba(var(--card-border-rgb), 0);
-  transition: background 200ms, border 200ms;
+.venuedet{
+  float: right;
+  margin-right: 20px;
+  margin-top: 30px;
+  width: 35%;
 }
-
-.card span {
-  display: inline-block;
-  transition: transform 200ms;
+.venuedet a {
+  color: #fff;
+  font-size: 20px;
+  line-height: 28px;
+  /* font-family: cursive; */
+  padding-bottom: 20px;
 }
-
-.card h2 {
-  font-weight: 600;
-  margin-bottom: 0.7rem;
+.speakersList h1{
+  color: #fff;
+  font-size: 40px;
+  text-align: center;
 }
-
-.card p {
-  margin: 0;
-  opacity: 0.6;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  max-width: 30ch;
-  text-wrap: balance;
-}
-
-.center {
+.venuecal{
+  background: url('/AIDentistryBrochure images/Calendar.png') no-repeat 0px 0px;
+  height: 153px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  padding: 4rem 0;
+    /* justify-content: center; */
+    align-items: center;
+  padding-left: 142px;
+  margin-bottom: 20px;
+}
+.venuelocate{
+  background: url('/AIDentistryBrochure images/Location.png') no-repeat 0px 0px;
+  height: 153px;
+  display: flex;
+    /* justify-content: center; */
+    align-items: center;
+  padding-left: 142px;
 }
 
 .center::before {
