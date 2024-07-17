@@ -10,37 +10,60 @@
   align-items: center;
 }
 .imageItem {
-
   flex-shrink: 1;
   flex-basis: calc(33.33% - 100px);
   box-sizing: border-box;
   max-width: 100%;
 }
-.pagesize{
+.pagesize {
   padding: 20px;
 }
 .image {
   margin: 0 10px;
 }
-.clearfix::after {
+.imageSponsors {
+  display: block;
+}
+.clearfix::after,
+.speakersList::after,
+.venuedet::after {
   content: "";
   display: table;
   clear: both;
-
 }
-.clearfix{
+.clearfix {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.programDetails{
+.registrationDetails, .BankaccountDet {
+  max-width: 1200px;
+  margin: 0px auto;
+  padding-top: 50px;
+  float: left;
+  width: 50%;
+}
+.registrationDetails h2, .BankaccountDet h2{
+  font-size: 20px;
+  margin-bottom: 0.5rem;
+  color: #243c7c;
+}
+.registrationDetails p, .BankaccountDet p {
+  font-size: 20px;
+  margin-bottom: 0.5rem;
+  color: #243c7c;
+}
+.registrationLink {
+  padding-top: 20px;
+}
 
+.programDetails {
   min-height: 1020px;
-  background: url('/AIDentistryBrochure images/1.jpg') no-repeat bottom center / cover;
+  background: url("/AIDentistryBrochure images/1.jpg") no-repeat bottom center /
+    cover;
 }
 .main {
   background: #243c7c;
-  padding-bottom: 50px;
 }
 .bannerHead {
   text-align: center;
@@ -70,7 +93,6 @@
   font-family: var(--font-mono);
 }
 
-
 .description a {
   display: flex;
   justify-content: center;
@@ -98,7 +120,7 @@
   max-width: 100%;
   width: var(--max-width);
 }
-.venuedet{
+.venuedet {
   float: right;
   margin-right: 20px;
   margin-top: 30px;
@@ -111,29 +133,122 @@
   /* font-family: cursive; */
   padding-bottom: 20px;
 }
-.speakersList h1{
+.speakersList {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+.speakersList h1,
+.chefAdvisors h1 {
   color: #fff;
   font-size: 40px;
   text-align: center;
 }
-.venuecal{
-  background: url('/AIDentistryBrochure images/Calendar.png') no-repeat 0px 0px;
+.speakerContent h3 {
+  color: #fff;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+.speakerContent p {
+  color: #d9ff09;
+  font-size: 16px;
+  font-weight: 600;
+}
+.speakerRow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  float: left;
+  width: 50%;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.speakerImage {
+  margin-right: 20px;
+}
+
+.speakerContent {
+  display: flex;
+  flex-direction: column;
+  max-width: 270px;
+}
+.venuecal {
+  background: url("/AIDentistryBrochure images/Calendar.png") no-repeat 0px 0px;
   height: 153px;
   display: flex;
-    /* justify-content: center; */
-    align-items: center;
+  /* justify-content: center; */
+  align-items: center;
   padding-left: 142px;
   margin-bottom: 20px;
 }
-.venuelocate{
-  background: url('/AIDentistryBrochure images/Location.png') no-repeat 0px 0px;
+.venuelocate {
+  background: url("/AIDentistryBrochure images/Location.png") no-repeat 0px 0px;
   height: 153px;
   display: flex;
-    /* justify-content: center; */
-    align-items: center;
+  /* justify-content: center; */
+  align-items: center;
   padding-left: 142px;
 }
+/* components/SessionDetails.module.css */
 
+.sessionDetails {
+  text-align: center;
+  padding: 20px;
+}
+
+.sessionDetails h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #243c7c;
+}
+
+.sessionDetails h2 {
+  font-size: 20px;
+  margin-bottom: 0.5rem;
+  color: #243c7c;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  max-width: 1106px;
+  margin: 20px auto;
+}
+
+.table th,
+.table td {
+  border: 1px solid #243c7c;
+  padding: 8px;
+}
+.table td {
+  max-width: 425px;
+}
+.table th {
+  background-color: #243c7c;
+  font-weight: bold;
+  padding: 20px;
+  color: #fff;
+}
+.sessiondetails {
+  background: #fff;
+}
+.footerContainer {
+  background: #fff;
+  
+}
+.footerwidth{
+  max-width: 1200px;
+  margin: 0px auto;
+  padding-top: 50px;
+}
+.chefAdvisors {
+  padding-top: 50px;
+}
+.chefAdvisorimage {
+  display: flex;
+}
 .center::before {
   background: var(--secondary-glow);
   border-radius: 50%;

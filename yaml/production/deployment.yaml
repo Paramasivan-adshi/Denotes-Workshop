@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: workshop
+  namespace: denotes
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: workshop
+  template:
+    metadata:
+      labels:
+        app: workshop
+    spec:
+      containers:
+        - name: workshop
+          image: gcr.io/centered-cursor-392711/website/nextjs:03 #denotesworkshopdeploy3
+          # resources:
+          #   requests:
+          #     memory: "1Gi"
+          #     cpu: "0.5"
+          #   limits:
+          #     memory: "2Gi"
+          #     cpu: "1"
+          ports:
+            - containerPort: 3000
+      restartPolicy: Always
