@@ -10,8 +10,7 @@
   align-items: center;
 }
 .imageItem {
-  flex-shrink: 1;
-  flex-basis: calc(33.33% - 100px);
+
   box-sizing: border-box;
   max-width: 100%;
 }
@@ -22,11 +21,15 @@
   margin: 0 10px;
 }
 .imageSponsors {
-  display: block;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .clearfix::after,
 .speakersList::after,
-.venuedet::after {
+.venuedet::after,
+.footerwidth::after, .chefAdvisors::after, .venueclear::after {
   content: "";
   display: table;
   clear: both;
@@ -36,19 +39,35 @@
   justify-content: center;
   align-items: center;
 }
-.registrationDetails, .BankaccountDet {
+.registrationDetails,
+.BankaccountDet {
   max-width: 1200px;
   margin: 0px auto;
-  padding-top: 50px;
+  padding-top: 10px;
   float: left;
   width: 50%;
+  min-height: 245px;
 }
-.registrationDetails h2, .BankaccountDet h2{
+.querydet {
+  float: left;
+  width: 50%;
+  max-width: 1200px;
+  margin: 0px auto;
+}
+.registrationDetails h2,
+.BankaccountDet h2,
+.querydet h2 {
   font-size: 20px;
   margin-bottom: 0.5rem;
   color: #243c7c;
 }
-.registrationDetails p, .BankaccountDet p {
+.registrationDetails h3 {
+  color: #cd0f0f;
+}
+
+.registrationDetails p,
+.BankaccountDet p,
+.querydet p {
   font-size: 20px;
   margin-bottom: 0.5rem;
   color: #243c7c;
@@ -61,6 +80,15 @@
   min-height: 1020px;
   background: url("/AIDentistryBrochure images/1.jpg") no-repeat bottom center /
     cover;
+    position: relative;
+}
+.sponsers{
+  position: absolute;
+  bottom: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  left: 80px;
 }
 .main {
   background: #243c7c;
@@ -139,20 +167,49 @@
   padding-bottom: 50px;
 }
 .speakersList h1,
-.chefAdvisors h1 {
+.chefAdvisors h1, .organiseCommitte h2{
   color: #fff;
   font-size: 40px;
   text-align: center;
+  font-weight: 500;
+}
+.organiseCommitte h3 {
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  font-weight: 400;
 }
 .speakerContent h3 {
   color: #fff;
   font-size: 20px;
   padding-bottom: 10px;
 }
-.speakerContent p {
+.speakerContent p,.chefAdvisorimage h2,.organiseCommitte h2 {
   color: #d9ff09;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
+  line-height: 30px;
+}
+.organiseCommitte h1 {
+  color: #fff;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+.chefAdvisorimage img {
+  width: auto !important;
+}
+.organiseCommitte h4 {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+.chefAdvisorimage p, .organiseCommitte p {
+  color: #fff;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 400;
 }
 .speakerRow {
   display: flex;
@@ -209,12 +266,40 @@
   color: #243c7c;
 }
 
+/*organising style*/
+
+.organiseCommitte .container {
+  text-align: center;
+  padding: 20px;
+  background-color: #243c7c;
+}
+
+.organiseCommitte .row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+
+.organiseCommitte .card {
+  background-color: #243c7c;
+  border-radius: 8px;
+  box-shadow: none;
+  padding: 20px;
+  margin: 10px;
+  max-width: 100%;
+  text-align: center;
+}
+
 .table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 1rem;
   max-width: 1106px;
   margin: 20px auto;
+}
+.table td {
+  color: #000 !important;
 }
 
 .table th,
@@ -236,18 +321,26 @@
 }
 .footerContainer {
   background: #fff;
-  
 }
-.footerwidth{
+.footerwidth {
   max-width: 1200px;
   margin: 0px auto;
   padding-top: 50px;
+  width: 100%;
+  padding-bottom: 20px;
 }
 .chefAdvisors {
   padding-top: 50px;
+  max-width: 1106px;
+  margin: 20px auto;
 }
 .chefAdvisorimage {
-  display: flex;
+  padding-top: 50px;
+    max-width: 1106px;
+    margin: 0px 20px;
+    float: left;
+    width: calc(50% - 40px);
+    text-align: center;
 }
 .center::before {
   background: var(--secondary-glow);
@@ -277,7 +370,7 @@
   position: relative;
 }
 /* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
+/* @media (hover: hover) and (pointer: fine) {
   .card:hover {
     background: rgba(var(--card-rgb), 0.1);
     border: 1px solid rgba(var(--card-border-rgb), 0.15);
@@ -286,19 +379,88 @@
   .card:hover span {
     transform: translateX(4px);
   }
-}
+} */
 
-@media (prefers-reduced-motion) {
+/* @media (prefers-reduced-motion) {
   .card:hover span {
     transform: none;
   }
-}
+} */
 
 /* Mobile */
+@media (max-width: 1100px){
+  .speakersList {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 50px;
+}
+  .footerwidth {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+  .venuedet {
+    float: left;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .programDetails {
+    min-height: 424px;
+}
+.sponsers {
+  left: 20px;
+  right: 20px;
+}
+}
+@media (max-width: 1024px){
+  .table td {
+    max-width: 100%;
+    font-size: 14px;
+}
+ 
+  .registrationDetails, .BankaccountDet{
+    width: 100%;
+}
+  .speakerRow {
+  
+    width: 100%;
+  
+  }
+ 
+}
+
+
 @media (max-width: 700px) {
+  .sponsers img {
+    width: auto !important;
+    height: auto !important;
+}
+  .organiseCommitte, .row {
+    display: block !important;
+}
+  .imageSponsors{
+    float: none;
+    display: block;
+}
+
+  .sponsers {
+    position: static;
+    margin: 0px 20px;
+}
+  .venuedet {
+    
+    display: block;
+  
+}
   .content {
     padding: 4rem;
   }
+  .bannerHead h1,.bannerHead h2, .bannerHead h3 {
+
+    font-size: 22px;
+    line-height: 26px;
+}
 
   .grid {
     grid-template-columns: 1fr;

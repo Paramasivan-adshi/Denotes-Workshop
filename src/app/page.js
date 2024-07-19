@@ -5,12 +5,13 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import SpeakerRow from "./components/SpeakerRow";
 import SessionDetails from "./components/SessionDetails";
+import OrganizingCommittee from "./components/organizing-committee";
 
 export default function Home() {
-  const router = useRouter();
-  const back = () => {
-    router.push("/test");
-  };
+  // const router = useRouter();
+  // const back = () => {
+  //   router.push("/test");
+  // };
   const imageCollegelist = [
     {
       src: "/AIDentistryBrochure images/2.png",
@@ -175,7 +176,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div onClick={back} className={styles.bannerHead}>
+        <div className={styles.bannerHead}>
           <h1>DEPARTMENT OF PUBLIC HEALTH DENTISTRY</h1>
           <h1>SRM KATTANKULATHUR DENTAL COLLEGE & HOSPITAL</h1>
           <h2>NATIONAL LEVEL WORKSHOP ON</h2>
@@ -183,6 +184,7 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.programDetails}>
+        <div className={styles.venueclear}>
         <div className={styles.venuedet}>
           <div className={styles.venuecal}>
             <p>
@@ -207,7 +209,10 @@ export default function Home() {
             </p>
           </div>
         </div>
-        {/* <div className={styles.sponsers}>
+        </div>
+        
+
+       <div className={styles.sponsers}>
           <div className={styles.imageSponsors}>
           {imageSponsorlist.map((image, index) => (
             <div className={styles.imageItem} key={index}>
@@ -222,7 +227,7 @@ export default function Home() {
           ))}
           </div>
       
-        </div> */}
+        </div> 
       </div>
       <div className={styles.speakersList}>
         <h1>KNOW YOUR SPEAKERS</h1>
@@ -239,13 +244,15 @@ export default function Home() {
           <Image
             src="/AIDentistryBrochure images/vivek.jpg" // Path to your image
             alt="DR Vivek image"
-            width={500} // Desired width of the image
-            height={300} // Desired height of the image
+            width={200} // Desired width of the image
+            height={200} // Desired height of the image
             layout="responsive" // Optional layout setting
           />
           <h2>Dr. N Vivek</h2>
           <p>Dean,</p>
           <p>SRMKDC</p>
+          </div>
+          <div className={styles.chefAdvisorimage}>
           <Image
             src="/AIDentistryBrochure images/magesh.jpg" // Path to your image
             alt="DR Magesh image"
@@ -256,38 +263,63 @@ export default function Home() {
           <h2>Dr. Magesh KT</h2>
           <p>Vice principal,</p>
           <p>SRMKDC</p>
-        </div>
+          </div>
+     
+
       </div>
+      <div className={styles.organiseCommitte}>
+      <OrganizingCommittee />
+      </div>
+
       <footer style={styles.footerStyle}>
         <div className={styles.footerContainer}>
           <div className={styles.footerwidth}>
-          <div className={styles.registrationDetails}>
-            <h2>REGISTRATION FEES:</h2>
-            <p>For Faculty : Rs. 1000/-</p>
-            <p>For PG / UG Students : Rs. 750/-</p>
-            <div className={styles.registrationLink}>
-              <h2>For Registration click:</h2>
+            <div className={styles.registrationDetails}>
+              <h2>REGISTRATION FEES:</h2>
+              <p>For Faculty : Rs. 1000/-</p>
+              <p>For PG / UG Students : Rs. 750/-</p>
+              <div className={styles.registrationLink}>
+                <h2>For Registration click:</h2>
 
-              <p>
-                <a
-                  href="https://forms.gle/wUzpfVp7x65mVQLw8"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  https://forms.gle/wUzpfVp7x65mVQLw8
-                </a>
-              </p>
-              <h3>Registration closes on July 25, 2024</h3>
+                <p>
+                  <a
+                    href="https://forms.gle/wUzpfVp7x65mVQLw8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    https://forms.gle/wUzpfVp7x65mVQLw8
+                  </a>
+                </p>
+                <h3>Registration closes on July 25, 2024</h3>
+              </div>
             </div>
-          </div>
-          <div className={styles.BankaccountDet}>
-            <h2>BANK ACCOUNT DETAILS:</h2>
-            <p>Name of the Account : SRMIST Dental College</p>
-            <p>Name of the Bank : City Union Bank Ltd</p>
-            <p>Account Number : 500101012867508</p>
-            <p>IFSC Code : CIUB0000117</p>
-            <p>Bank Branch : Chennai, Tambaram</p>
-          </div>
+            <div className={styles.BankaccountDet}>
+              <h2>BANK ACCOUNT DETAILS:</h2>
+              <p>
+                <b>Name of the Account :</b> SRMIST Dental College
+              </p>
+              <p>
+                <b>Name of the Bank :</b> City Union Bank Ltd
+              </p>
+              <p>
+                <b>Account Number :</b> 500101012867508
+              </p>
+              <p>
+                <b>IFSC Code :</b> CIUB0000117
+              </p>
+              <p>
+                <b>Bank Branch :</b> Chennai, Tambaram
+              </p>
+            </div>
+            <div className={styles.querydet}>
+              <h2>For queries contact: </h2>
+              <p>
+                <b>Dr.Indumathi.K.P :</b> 9940306581
+              </p>
+              <p>
+                <b>Dr. Krishnaprakash G :</b> 6374987544
+              </p>
+            </div>
           </div>
         </div>
       </footer>

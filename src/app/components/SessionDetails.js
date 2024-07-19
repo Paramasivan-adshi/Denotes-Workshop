@@ -1,6 +1,4 @@
-
-
-import styles from '../page.module.css';
+import styles from "../page.module.css";
 const sessionDetailsIntro = [
   {
     time: "09:30 - 10:15 am",
@@ -34,7 +32,8 @@ const sessionDetailsIntro = [
   },
   {
     time: "02:15 - 03:00 pm",
-    topic: "Talk, Type, Save time: A Hands on Experience with denotes.app (Empowering Dentists with AI)",
+    topic:
+      "Talk, Type, Save time: A Hands on Experience with denotes.app (Empowering Dentists with AI)",
     speaker: "Mr. Ramkumar Venkatesan",
   },
   {
@@ -44,107 +43,109 @@ const sessionDetailsIntro = [
   },
 ];
 const sessionDetailsDay2Diagnosis = [
-    {
-      time: "09:30 - 10:00 am",
-      topic: "Application of AI in Public Health",
-      speaker: "Dr. Nandita Kshetrimayum",
-    },
-    {
-      time: "10:00 - 10:45 am",
-      topic: "The Ethical Framework of AI in Biomedical Research and Healthcare",
-      speaker: "Dr. Kunaal Dhingra",
-    },
-    {
-      time: "10:45 - 11:00 am",
-      topic: "Tea",
-      speaker: "",
-    },
-    {
-      time: "11:00 - 11:30 am",
-      topic: "Potential Uses of AI in Oral Cancer Diagnosis and Precancerous Lesion Detection",
-      speaker: "Dr. Varun Surya",
-    },
-    {
-      time: "11:30 - 12:00 pm",
-      topic: "AI Analysis of Oral Cancer Data",
-      speaker: "Prof. Debnath Pal",
-    },
-    {
-      time: "12:00 - 12:30 pm",
-      topic: "Insights into Projects on Role of AI in Oral Cancer",
-      speaker: "Dr.Deepika Mishra",
-    },
-    {
-      time: "12:30 - 01:15 pm",
-      topic: "Lunch",
-      speaker: "",
-    }
-  ];
+  {
+    time: "09:30 - 10:00 am",
+    topic: "Application of AI in Public Health",
+    speaker: "Dr. Nandita Kshetrimayum",
+  },
+  {
+    time: "10:00 - 10:45 am",
+    topic: "The Ethical Framework of AI in Biomedical Research and Healthcare",
+    speaker: "Dr. Kunaal Dhingra",
+  },
+  {
+    time: "10:45 - 11:00 am",
+    topic: "Tea",
+    speaker: "",
+  },
+  {
+    time: "11:00 - 11:30 am",
+    topic:
+      "Potential Uses of AI in Oral Cancer Diagnosis and Precancerous Lesion Detection",
+    speaker: "Dr. Varun Surya",
+  },
+  {
+    time: "11:30 - 12:00 pm",
+    topic: "AI Analysis of Oral Cancer Data",
+    speaker: "Prof. Debnath Pal",
+  },
+  {
+    time: "12:00 - 12:30 pm",
+    topic: "Insights into Projects on Role of AI in Oral Cancer",
+    speaker: "Dr.Deepika Mishra",
+  },
+  {
+    time: "12:30 - 01:15 pm",
+    topic: "Lunch",
+    speaker: "",
+  },
+];
 
-  const sessionDetailsDay2Cancer = [
-    {
-      time: "09:30 - 10:00 am",
-      topic: "Application of AI in Public Health",
-      speaker: "Dr. Nandita Kshetrimayum",
-    },
-    {
-      time: "10:00 - 10:45 am",
-      topic: "The Ethical Framework of AI in Biomedical Research and Healthcare",
-      speaker: "Dr. Kunaal Dhingra",
-    },
-    {
-      time: "10:45 - 11:00 am",
-      topic: "Tea",
-      speaker: "",
-    },
-    {
-      time: "11:00 - 11:30 am",
-      topic: "Potential Uses of AI in Oral Cancer Diagnosis and Precancerous Lesion Detection",
-      speaker: "Dr. Varun Surya",
-    },
-    {
-      time: "11:30 - 12:00 pm",
-      topic: "AI Analysis of Oral Cancer Data",
-      speaker: "Prof. Debnath Pal",
-    },
-    {
-      time: "12:00 - 12:30 pm",
-      topic: "Insights into Projects on Role of AI in Oral Cancer",
-      speaker: "Dr.Deepika Mishra",
-    },
-    {
-      time: "12:30 - 01:15 pm",
-      topic: "Lunch",
-      speaker: "",
-    }
-  ];
+const sessionDetailsDay2Cancer = [
+  {
+    time: "09:30 - 10:00 am",
+    topic: "Application of AI in Public Health",
+    speaker: "Dr. Nandita Kshetrimayum",
+  },
+  {
+    time: "10:00 - 10:45 am",
+    topic: "The Ethical Framework of AI in Biomedical Research and Healthcare",
+    speaker: "Dr. Kunaal Dhingra",
+  },
+  {
+    time: "10:45 - 11:00 am",
+    topic: "Tea",
+    speaker: "",
+  },
+  {
+    time: "11:00 - 11:30 am",
+    topic:
+      "Potential Uses of AI in Oral Cancer Diagnosis and Precancerous Lesion Detection",
+    speaker: "Dr. Varun Surya",
+  },
+  {
+    time: "11:30 - 12:00 pm",
+    topic: "AI Analysis of Oral Cancer Data",
+    speaker: "Prof. Debnath Pal",
+  },
+  {
+    time: "12:00 - 12:30 pm",
+    topic: "Insights into Projects on Role of AI in Oral Cancer",
+    speaker: "Dr.Deepika Mishra",
+  },
+  {
+    time: "12:30 - 01:15 pm",
+    topic: "Lunch",
+    speaker: "",
+  },
+];
 
-  const sessionDetailsDay2OralCancer = [
-    {
-      time: "01:15 - 02:00 pm",
-      topic: "Data Collection and Anonymization",
-      perspective : "Doctors Role",
-      presenter: "Dr. Deepika Mishra & Dr. Varun Surya",
-    },
-    {
-        time: "02:00 - 02:45 pm",
-        topic: "Data Ingestion, Annotation and Curation",
-        perspective : "AI Scientist Role",
-        presenter: "Prof. Debnath Pal",
-    },
-    {
-      time: "02:45 - 03:00 pm",
-      topic: "Discussion and Closing Note",
-      perspective : "",
-      presenter: "",
-    },
-    {
-      time: "03:00 pm",
-      topic: "High Tea",
-      perspective : "",
-      presenter: "",
-    }
-  ];
+const sessionDetailsDay2OralCancer = [
+  {
+    time: "01:15 - 02:00 pm",
+    topic: "Data Collection and Anonymization",
+    perspective: "Doctors Role",
+    presenter: "Dr. Deepika Mishra & Dr. Varun Surya",
+  },
+  {
+    time: "02:00 - 02:45 pm",
+    topic: "Data Ingestion, Annotation and Curation",
+    perspective: "AI Scientist Role",
+    presenter: "Prof. Debnath Pal",
+  },
+  {
+    time: "02:45 - 03:00 pm",
+    topic: "Discussion and Closing Note",
+    perspective: "",
+    presenter: "",
+  },
+  {
+    time: "03:00 pm",
+    topic: "High Tea",
+    perspective: "",
+    presenter: "",
+  },
+];
 
 export default function SessionDetails() {
   return (
@@ -190,7 +191,9 @@ export default function SessionDetails() {
         </tbody>
       </table>
 
-      <h2>DAY 2: DEMONSTRATION SESSION: AI TOOLS IN DETECTION OF ORAL CANCER</h2>
+      <h2>
+        DAY 2: DEMONSTRATION SESSION: AI TOOLS IN DETECTION OF ORAL CANCER
+      </h2>
       <table className={styles.table}>
         <thead>
           <tr>
