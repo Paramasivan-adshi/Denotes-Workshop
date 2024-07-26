@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: workshop
-          image: gcr.io/centered-cursor-392711/website/nextjs:05 #denotesworkshopdeploy5
+          image: gcr.io/centered-cursor-392711/website/nextjs:08 #denotesworkshopdeploy8
           # resources:
           #   requests:
           #     memory: "1Gi"
